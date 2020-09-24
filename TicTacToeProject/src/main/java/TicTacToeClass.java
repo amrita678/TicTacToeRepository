@@ -37,8 +37,20 @@ public class TicTacToeClass {
 	         obj.userInputSlotNumber=obj.validatingSlotAsNumber();
       }
 
-   	public int validatingSlotAsNumber() {
-		 	return 0;
-     }
+	public int validatingSlotAsNumber() {
+		 boolean flag=true;
+			in=new Scanner(System.in);
+			while(flag) {
+				System.out.println("X's will play first. Enter a slot number to place X in: ");
+				userInputSlotNumber = in.nextInt();
+			    if (userInputSlotNumber <1 || userInputSlotNumber > 9) {
+				       System.out.println("Invalid input; re-enter slot number:");
+			           continue;
+			    }
+			    else
+			    	flag=false;
+			}
+			return userInputSlotNumber;
+}
 
 }
