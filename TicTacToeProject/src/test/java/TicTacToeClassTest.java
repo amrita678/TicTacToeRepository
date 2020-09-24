@@ -25,4 +25,8 @@ public class TicTacToeClassTest {
 		assertEquals(expected, actual);
 	}
 	
+	@Test
+	public void xTurnShouldBeFirst() {
+		assertEquals("X", ticTacToeObject.xTurnFirst());
+	}
 }
