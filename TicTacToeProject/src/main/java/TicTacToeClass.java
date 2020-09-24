@@ -2,7 +2,7 @@
 public class TicTacToeClass {
 
     String[] board=new String[9];
-    
+    String turn="X";
     //To initialize empty board
 	public String populateEmptyBoard() {
 		for(int i=0;i<9;i++) {
@@ -32,7 +32,7 @@ public class TicTacToeClass {
       }
 
 	public String xTurnFirst() {
-		return null;
+		return turn;
 	}
 
 }
