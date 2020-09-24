@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TicTacToeClass {
@@ -39,18 +40,27 @@ public class TicTacToeClass {
 
 	public int validatingSlotAsNumber() {
 		 boolean flag=true;
-			in=new Scanner(System.in);
-			while(flag) {
+		 in=new Scanner(System.in);
+		 while(flag) 
+		 {
+		   try
+		   {
 				System.out.println("X's will play first. Enter a slot number to place X in: ");
 				userInputSlotNumber = in.nextInt();
 			    if (userInputSlotNumber <1 || userInputSlotNumber > 9) {
 				       System.out.println("Invalid input; re-enter slot number:");
 			           continue;
-			    }
-			    else
+			      }
+			    else 
 			    	flag=false;
-			}
-			return userInputSlotNumber;
+			    
+			 }
+			 catch(InputMismatchException ex) {
+				     System.out.println(ex);
+			     }
+			   
+		  }
+   return userInputSlotNumber;
 }
 
 }
