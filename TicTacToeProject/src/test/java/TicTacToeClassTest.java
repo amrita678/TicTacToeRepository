@@ -21,6 +21,8 @@ public class TicTacToeClassTest {
 			     +"\n"+ "|-----------|" 
 			     +"\n"+ "| 7 | 8 | 9 |"
 			     +"\n"+ "|-----------|";
-		assertEquals(expected, ticTacToeObject.printEmptyBoard());
+		String actual=ticTacToeObject.populateEmptyBoard();
+		assertEquals(expected, actual);
 	}
+	
 }
