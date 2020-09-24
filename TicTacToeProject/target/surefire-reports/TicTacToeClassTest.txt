@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TicTacToeClassTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! - in TicTacToeClassTest
+shouldPrintEmptyBoard  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.NullPointerException
+	at TicTacToeClassTest.shouldPrintEmptyBoard(TicTacToeClassTest.java:18)
+
