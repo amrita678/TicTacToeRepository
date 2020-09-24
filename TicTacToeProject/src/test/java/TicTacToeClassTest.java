@@ -1,4 +1,8 @@
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,7 +30,16 @@ public class TicTacToeClassTest {
 	}
 	
 	@Test
-	public void xTurnShouldBeFirst() {
-		assertEquals("X", ticTacToeObject.xTurnFirst());
+	public void slotNumberValidation() {
+		
+		int[] slotNumberShouldBe= {1,2,3,4,5,6,7,8,9};
+		
+		assertEquals("X", ticTacToeObject.turn,"X should play first ");
+		int actual=ticTacToeObject.validatingSlotAsNumber();
+		assertEquals(true,Arrays.stream(slotNumberShouldBe).anyMatch(x -> x ==actual ));
 	}
 }
+
+
+
+
